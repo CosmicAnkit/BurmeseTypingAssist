@@ -1,7 +1,15 @@
 # BurmeseTypingAssist
 
 
-Here's a simplified guide on how to run your Burmese Typing Assistant project with Qt Creator on Windows:
+## Downloading as a ZIP Archive
+
+   * Open the web page of your project's repository https://github.com/CosmicAnkit/BurmeseTypingAssist
+      
+*  Find the "Code" or "Clone" Button: Look for a button that says "Code," "Clone," or something similar.
+      
+* Download ZIP: Click on the button and select "Download ZIP."
+      
+  * Extract the ZIP File: Once the download is complete, extract the ZIP file to the desired location on your computer. This will create a new folder containing the project files.
 
 1.  **Install Qt:**
 
