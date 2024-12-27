@@ -7,7 +7,10 @@
 #include <QRegularExpression>
 #include <QTableWidgetItem>
 #include <QClipboard>
+#include <QDir>
 #include "burm.h"
+#include <QRegularExpression> 
+
 
 
 
@@ -35,9 +38,12 @@ QMap<QString, QString> csvData;
 
 void MainWindow::loadCsvData()
 {
-    QString txtPath = "/home/ankit/Desktop/BurmeseTypingAssist/BurmeseTypingAssist/suggestions.txt";
-    QString csvPath = "/home/ankit/Desktop/BurmeseTypingAssist/BurmeseTypingAssist/suggestions.csv";
+    // QString txtPath = "/home/ankit/Desktop/BurmeseTypingAssist/BurmeseTypingAssist/suggestions.txt";
+    // QString csvPath = "/home/ankit/Desktop/BurmeseTypingAssist/BurmeseTypingAssist/suggestions.csv";
 
+    QString txtPath = ":data/suggestions.txt";
+    QString csvPath = ":data/suggestions.csv";
+    qDebug() << "Current directory:" << QDir::currentPath();
     QFile csvFile(csvPath);
     if (!csvFile.exists()) {
         createCsvFromTxt(txtPath, csvPath);
@@ -59,8 +65,8 @@ void MainWindow::loadCsvData()
         QString line = in.readLine();
         QStringList parts = line.split(',');
         if (parts.size() == 2) {
-            QString burmese = parts[0].trimmed();
-            QString english = parts[1].trimmed();
+            QString burmese = parts[0].trimmed().remove(QRegularExpression("^[\"']|[\"']$"));
+            QString english = parts[1].trimmed().remove(QRegularExpression("^[\"']|[\"']$"));
             csvData.insert(burmese, english); // Store in the QMap
         }
     }

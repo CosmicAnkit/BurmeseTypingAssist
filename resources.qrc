@@ -1,0 +1,8 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/">
+        <file>data/suggestions.csv</file>
+        <file>data/transliteration_guide.json</file>
+        <file>data/suggestions.txt</file>
+    </qresource>
+</RCC>

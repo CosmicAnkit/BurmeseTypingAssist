@@ -8,7 +8,7 @@ TransliterationGuide::TransliterationGuide(QWidget *parent) :
 {
     ui->setupUi(this);
     // loadGuideFromJson("/home/ankit/Desktop/BurmeseTypingAssist/BurmeseTypingAssist/transliteration_guide.json");
-    loadGuideFromJson("../../transliteration_guide.json");
+    loadGuideFromJson(":/data/transliteration_guide.json");
 
     ui->guideTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui->guideTable->verticalHeader()->setVisible(false);

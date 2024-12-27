@@ -39,6 +39,15 @@ CMakeFiles/
 cmake_install.cmake
 install_manifest.txt
 
+
+.qt/
+        BurmeseTypingAssist
+        BurmeseTypingAssist_autogen/
+        Makefile
+
+        qrc_resources.cpp
+
+        resources.qrc.depends
 # Qt build artifacts
 *.qrc.user
 

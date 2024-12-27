@@ -17,16 +17,37 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+        resources.qrc
 
 )
+
+
+
+
+
+# Add the qrc file to your project
+set(RESOURCES
+    resources.qrc
+)
+
+# Generate the resource file
+qt_add_resources(RESOURCES_RCC ${RESOURCES})
+
+
+
+
+# qt6_add_resources(app_resources resources.qrc) #Creates the resources target
+
+
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(BurmeseTypingAssist
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        transliteration_guide.json
         transliterationguide.h transliterationguide.cpp transliterationguide.ui
         burm.h
+        # app_resources # Add this line
+        ${RESOURCES_RCC}
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET BurmeseTypingAssist APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
@@ -42,11 +63,14 @@ else()
     else()
         add_executable(BurmeseTypingAssist
             ${PROJECT_SOURCES}
+            
         )
     endif()
 endif()
 
-target_link_libraries(BurmeseTypingAssist PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(BurmeseTypingAssist PRIVATE Qt${QT_VERSION_MAJOR}::Widgets )
+# target_link_libraries(BurmeseTypingAssist PRIVATE Qt6::Core Qt6::Gui Qt6::Widgets app_resources)  # Links the resources target
+
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an

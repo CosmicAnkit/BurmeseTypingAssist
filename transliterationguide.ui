@@ -6,20 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>414</width>
-    <height>333</height>
+    <width>500</width>
+    <height>400</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Transliteration Guide</string>
   </property>
   <widget class="QTableWidget" name="guideTable">
    <property name="geometry">
     <rect>
      <x>20</x>
      <y>20</y>
-     <width>361</width>
-     <height>281</height>
+     <width>450</width>
+     <height>350</height>
     </rect>
    </property>
    <property name="gridStyle">
@@ -28,11 +28,38 @@
    <property name="columnCount">
     <number>2</number>
    </property>
+   <property name="styleSheet">
+    <string>
+     QTableWidget {
+         border: 1px solid #bbb;
+         border-radius: 8px;
+         font-size: 14px;
+         font-family: "Arial";
+         background-color: #f9f9f9;
+         color: #333;
+     }
+     QHeaderView::section {
+         background-color: #5CB85C;
+         color: white;
+         font-size: 14px;
+         font-weight: bold;
+         border: 1px solid #ddd;
+     }
+    </string>
+   </property>
    <attribute name="horizontalHeaderCascadingSectionResizes">
     <bool>false</bool>
    </attribute>
-   <column/>
-   <column/>
+   <column>
+    <property name="text">
+     <string>Burmese</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>SLP1(English)</string>
+    </property>
+   </column>
   </widget>
  </widget>
  <resources/>
