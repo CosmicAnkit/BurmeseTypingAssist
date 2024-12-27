@@ -1,0 +1,71 @@
+# Build directories
+build/
+*.o
+*.d
+*.exe
+*.obj
+*.ilk
+*.pdb
+*.idb
+*.ncb
+*.suo
+*.sln
+*.sdf
+*.opensdf
+*.ipch
+*.user
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+Debug/
+Release/
+*.VC.db
+*.VC.VC.opendb
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sdf
+*.suo
+
+# Qt Creator specific files
+*.user*
+*.pro.user
+
+# CMake related files
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+
+# Qt build artifacts
+*.qrc.user
+
+# Other temporary files
+*~
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Visual Studio Code
+.vscode/
+
+# Qt VS tools files
+*.vsix
+*.vstemplate
+
+# Qt Creator backups
+*.autosave
+
+# Other IDE or editor files (adjust as needed)
+*.swp        # Vim swap files
+*.swo        # Vim swap files
+*.idea/      # IntelliJ IDEA
+*.ipr
+*.iws
+*.iml
+*.bak        # Backup files
+*.orig       # Backup files
+
+
