@@ -41,6 +41,7 @@ install_manifest.txt
 
 
 .qt/
+BurmeseTypingAssist_autogen/
         BurmeseTypingAssist
         BurmeseTypingAssist_autogen/
         Makefile
